@@ -1,3 +1,4 @@
+import sys
 from logging.config import fileConfig
 
 from sqlalchemy import engine_from_config
@@ -5,7 +6,9 @@ from sqlalchemy import pool
 
 from alembic import context
 
-from db import TelegramUser, Base
+sys.path = ['', '..'] + sys.path[1:]
+
+from db import Base, TelegramUser, City, SubCategory, TaskCategory
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
