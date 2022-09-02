@@ -132,3 +132,4 @@ dmypy.json
 driver/
 database/alembic.ini
 .vscode/
+*.ipynb
