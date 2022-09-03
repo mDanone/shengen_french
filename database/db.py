@@ -16,6 +16,7 @@ class City(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     title = Column(String)
+    value = Column(Integer)
 
 
 class TaskCategory(Base):
@@ -29,6 +30,7 @@ class TaskCategory(Base):
         lazy="selectin",
         cascade="all, delete",
     )
+    value = Column(Integer)
 
 
 class SubCategory(Base):
@@ -37,3 +39,4 @@ class SubCategory(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     title = Column(String)
     task_category_id = Column(Integer, ForeignKey("task_categories.id", ondelete="CASCADE"))
+    value = Column(Integer)
